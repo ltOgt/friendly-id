@@ -11,6 +11,23 @@ word-word-word   64,000,000,000
 ...
 ```
 
+# Example
+```dart
+print(FriendlyId(offset: 0).next());
+print(FriendlyId(offset: 42).next());
+print(FriendlyId(offset: 1337).next());
+print(FriendlyId(offset: 9001).next());
+print(FriendlyId(offset: 1234123412341234).next());
+```
+Will output
+```
+digit
+celsius
+parsley
+digit-fuchsia
+snapper-coin-scrawny-rapid-albertosaurus
+```
+
 # Usage
 ## Caller managed
 ```dart
