@@ -33,4 +33,15 @@ void main() {
       equals(words.first + "-" + words.first + "-" + words.first),
     );
   });
+
+  test('Offset recovery', () {
+    final id = FriendlyId(offset: 0)
+      ..next()
+      ..next()
+      ..next();
+    final offset = id.offset;
+
+    expect(offset, equals(3));
+    expect(id.next(), equals(FriendlyId(offset: offset).next()));
+  });
 }
